@@ -1,0 +1,5 @@
+---
+deployment:
+      tasks:
+        - export DEPLOYPATH=/home/jrevdavs/public_html/summoning
+        - /bin/cp -r /home/glades/repositories/anito-summoning/ * $DEPLOYPATH
