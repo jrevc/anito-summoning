@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://cdn.lineicons.com/3.0/lineicons.css" rel="stylesheet">
 
-  <link rel="stylesheet" href="css/style.css?version=0.0.3">
+  <link rel="stylesheet" href="css/style.css?version=0.0.4">
 </head>
 <body>
   <nav class="main-nav">
@@ -81,17 +81,13 @@
         <div class="container-hill">
           <h2 class="summon-title">The Rite of Ipa Tawag</h2>
           <div class="stone-indicator left">
-            <img class="summon-stone" src="images/summoning_stone.png">
-            <img class="summon-stone" src="images/summoning_stone.png">
-            <img class="summon-stone" src="images/summoning_stone.png">
-            <img class="summon-stone" src="images/summoning_stone.png">
           </div>
 
           <!-- Left -->
 
           <button type="button" id="summon-button-left" class="summon-button left">Luntian</button>
           <div class="anito-summoner left">
-            <img src="images/anitos/kiwig_05.png">
+            <img id="anito-image-left" src="images/anitos/kiwig_05.png">
           </div>
 
           <!-- Middle -->
@@ -104,7 +100,7 @@
 
           <button type="button" id="summon-button-right" class="summon-button right">Sungay</button>
           <div class="anito-summoner right">
-            <img src="images/anitos/tikbalang_06.png">
+            <img id="anito-image-right" src="images/anitos/tikbalang_06.png">
           </div>
 
           <!-- Bottom -->
@@ -123,7 +119,13 @@
         <div class="anito-list">
 
           <!-- Anito entry -->
-          <div class="anito-list-entry">
+          <div class="anito-list-entry"
+            name="Bituin"
+            number="9151"
+            type="kiwig"
+            summons="2"
+            image="kiwig_04.png"
+            >
             <div class="anito-list-image">
               <img src="images/anitos/kiwig_04.png">
             </div>
@@ -137,7 +139,13 @@
           </div>
 
           <!-- Anito entry -->
-          <div class="anito-list-entry">
+          <div class="anito-list-entry"
+            name="Razzmatazz"
+            number="2652"
+            type="tikbalang"
+            summons="0"
+            image="tikbalang_12.png"
+            >
             <div class="anito-list-image">
               <img src="images/anitos/tikbalang_12.png">
             </div>
@@ -151,7 +159,13 @@
           </div>
 
           <!-- Anito entry -->
-          <div class="anito-list-entry">
+          <div class="anito-list-entry"
+            name="Istarbak"
+            number="7166"
+            type="siyokoy"
+            summons="0"
+            image="siyokoy_05.png"
+            >
             <div class="anito-list-image">
               <img src="images/anitos/siyokoy_05.png">
             </div>
@@ -165,7 +179,13 @@
           </div>
 
           <!-- Anito entry -->
-          <div class="anito-list-entry">
+          <div class="anito-list-entry"
+            name="Sleepy"
+            number="679"
+            type="sarangay"
+            summons="0"
+            image="sarangay_06.png"
+            >
             <div class="anito-list-image">
               <img src="images/anitos/sarangay_06.png">
             </div>
@@ -189,7 +209,13 @@
         <div class="anito-list">
 
           <!-- Anito entry -->
-          <div class="anito-list-entry">
+          <div class="anito-list-entry"
+            name="Bituin"
+            number="9151"
+            type="kiwig"
+            summons="2"
+            image="kiwig_04.png"
+            >
             <div class="anito-list-image">
               <img src="images/anitos/kiwig_04.png">
             </div>
@@ -203,7 +229,13 @@
           </div>
 
           <!-- Anito entry -->
-          <div class="anito-list-entry">
+          <div class="anito-list-entry"
+            name="Razzmatazz"
+            number="2652"
+            type="tikbalang"
+            summons="0"
+            image="tikbalang_12.png"
+            >
             <div class="anito-list-image">
               <img src="images/anitos/tikbalang_12.png">
             </div>
@@ -217,7 +249,13 @@
           </div>
 
           <!-- Anito entry -->
-          <div class="anito-list-entry">
+          <div class="anito-list-entry"
+            name="Istarbak"
+            number="7166"
+            type="siyokoy"
+            summons="0"
+            image="siyokoy_05.png"
+            >
             <div class="anito-list-image">
               <img src="images/anitos/siyokoy_05.png">
             </div>
@@ -231,7 +269,13 @@
           </div>
 
           <!-- Anito entry -->
-          <div class="anito-list-entry">
+          <div class="anito-list-entry"
+            name="Sleepy"
+            number="679"
+            type="sarangay"
+            summons="0"
+            image="sarangay_06.png"
+            >
             <div class="anito-list-image">
               <img src="images/anitos/sarangay_06.png">
             </div>
@@ -335,10 +379,13 @@
   </div>
   <!-- slide out menu end -->
 
-  <script src="js/summon-animations.js?version=0.0.3"></script>
+  <script src="js/summon-animations.js?version=0.0.4"></script>
   <script>
-    window.onload = randomStoneDelay()
-    window.onload = startListeners()
+    window.onload = () => {
+      startListeners()
+      window.onload = createStonesLeft(4)
+      window.onload = createStonesRight(2)
+    }
   </script>
 </body>
 </html>

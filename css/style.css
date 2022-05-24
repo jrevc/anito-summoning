@@ -555,6 +555,7 @@ a:hover ~ .nav-dropdown-menu,
   width: 160px;
   flex-shrink: 0;
   text-align: center;
+  pointer-events: none;
 }
 
 .anito-list-image img {
@@ -567,6 +568,7 @@ a:hover ~ .nav-dropdown-menu,
   align-items: start;
   justify-content: center;
   margin-right: 16px;
+  pointer-events: none;
 }
 
 .anito-number {
