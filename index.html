@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://cdn.lineicons.com/3.0/lineicons.css" rel="stylesheet">
 
-  <link rel="stylesheet" href="css/style.css?version=0.0.2">
+  <link rel="stylesheet" href="css/style.css?version=0.0.3">
 </head>
 <body>
   <nav class="main-nav">
@@ -74,6 +74,10 @@
           <img class="swirl" src="images/summon_swirl.png">
         </div>
         <img class="summon-hill" src="images/summon_hill.png">
+        <div class="summoning-stone">
+          <img class="summoning-stone-img" src="images/summon_stone_off.png">
+          <img class="summoning-stone-img glow" src="images/summon_stone_glow.png">
+        </div>
         <div class="container-hill">
           <h2 class="summon-title">The Rite of Ipa Tawag</h2>
           <div class="stone-indicator left">
@@ -92,10 +96,6 @@
 
           <!-- Middle -->
 
-          <div class="summoning-stone">
-            <img class="summoning-stone-img" src="images/summon_stone_off.png">
-            <img class="summoning-stone-img glow" src="images/summon_stone_glow.png">
-          </div>
           <div class="stone-indicator right">
             <img class="summon-stone" src="images/summoning_stone.png">
           </div>
@@ -335,7 +335,7 @@
   </div>
   <!-- slide out menu end -->
 
-  <script src="js/summon-animations.js?version=0.0.2"></script>
+  <script src="js/summon-animations.js?version=0.0.3"></script>
   <script>
     window.onload = randomStoneDelay()
     window.onload = startListeners()
