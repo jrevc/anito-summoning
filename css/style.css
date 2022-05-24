@@ -228,10 +228,10 @@ a:hover ~ .nav-dropdown-menu,
 
 #summoning {
   /* height: 650px; */
-  height: calc(100vh - 93px);
+  /* min-height: calc(100vh - 93px); */
   background-image: url(../images/summon_sky.png);
   background-size: auto 100%;
-  background-position: center;
+  background-position: bottom center;
   position: relative;
   overflow: hidden;
 }
@@ -252,7 +252,9 @@ a:hover ~ .nav-dropdown-menu,
 }
 
 .hill {
-  height: 100%;
+  /* min-height: calc(100vh - 93px); */
+  display: flex;
+  align-items: end;
 }
 
 .container-swirl {
@@ -291,21 +293,20 @@ a:hover ~ .nav-dropdown-menu,
 }
 
 .container-hill {
-  height: 80%;
+  height: 100%;
   max-width: 640px;
   margin: 0 auto;
-  justify-content: center;
   position: relative;
+  justify-content: center;
   display: grid;
   grid-template-columns: [anito-left] 1fr [anito-left-mid] 1fr [stone-left] 3fr [stone-right] 1fr [anito-right-mid] 1fr [anito-right];
-  grid-template-rows: 1fr 3fr 40px 200px;
+  grid-template-rows: 100px 200px 40px 200px 1fr;
   grid-template-areas:
     "header header header header header"
     "space-left space-left space space-right space-right"
     "btn-left btn-left stone btn-right btn-right"
-    "anito-left anito-left stone anito-right anito-right";
-  top: 50%;
-  transform: translateY(-50%);
+    "anito-left anito-left stone anito-right anito-right"
+    "footer footer footer footer footer";
 }
 
 /**********/
@@ -338,10 +339,11 @@ a:hover ~ .nav-dropdown-menu,
 }
 
 .summon-interface {
-  position: relative;
+  /* position: relative; */
+  grid-area: footer;
   text-align: center;
   z-index: 6;
-  padding-top: 40px;
+  padding: 40px 0;
 }
 
 .summon-button {
@@ -972,8 +974,8 @@ footer {
   }
 
   .container-hill {
-    top: 0;
-    transform: translateY(0);
+    /* top: 0;
+    transform: translateY(0); */
   }
 
   .section-unit {
