@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="image/png" href="images/favicon.png">
+  <title>Anito Legends - Summoning</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.lineicons.com/3.0/lineicons.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css?version=0.0.1">
+</head>
+<body>
+  <nav class="main-nav">
+    <div class="main-nav-container">
+        <div class="main-nav-identity">
+            <a href="index.html"><img src="images/logo_clear.png" alt="Anito Legends"></a>
+        </div>
+        <ul class="main-nav-list">
+            <li class="nav-dropdown">
+                <a>The Project</a>
+                <ul class="nav-dropdown-menu">
+                    <li>
+                        <a href="index.html#about">About</a>
+                    </li>
+                    <li>
+                        <a href="index.html#roadmap">Roadmap</a>
+                    </li>
+                    <li>
+                        <a href="index.html#gameflow">Game Flow</a>
+                    </li>
+                    <li>
+                        <a href="index.html#roadmap">Roadmap</a>
+                    </li>
+                    <li>
+                        <a href="index.html#gameflow">Game Flow</a>
+                    </li>
+                    <li>
+                        <a href="index.html#tokenomics">Tokenomics</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="index.html#team">The Team</a>
+            </li>
+            <li>
+                <a href="index.html#partners">Partners</a>
+            </li>
+            <li>
+                <a href="wallpaper.html">Wallpaper</a>
+            </li>
+            <li>
+                <a href="https://docs.anitolegends.com/" target="_blank" rel="noreferrer">White Paper</a>
+            </li>
+            <li class="highlight">
+                <a href="https://play.anitolegends.com/" target="_blank" rel="noreferrer">Play Now</a>
+            </li>
+        </ul>
+        <div class="main-nav-button" onclick="OpenMenu()">
+            <i class="lni lni-menu"></i>
+        </div>
+    </div>
+  </nav>
+
+  <main>
+    <section id="summoning">
+      <div id="summon-filter"></div>
+      <div class="hill">
+        <div class="container-swirl">
+          <img class="swirl" src="images/summon_swirl.png">
+        </div>
+        <img class="summon-hill" src="images/summon_hill.png">
+        <div class="container-hill">
+          <h2 class="summon-title">The Rite of Ipa Tawag</h2>
+          <div class="stone-indicator left">
+            <img class="summon-stone" src="images/summoning_stone.png">
+            <img class="summon-stone" src="images/summoning_stone.png">
+            <img class="summon-stone" src="images/summoning_stone.png">
+            <img class="summon-stone" src="images/summoning_stone.png">
+          </div>
+
+          <!-- Left -->
+
+          <button type="button" id="summon-button-left" class="summon-button left">Luntian</button>
+          <div class="anito-summoner left">
+            <img src="images/anitos/kiwig_05.png">
+          </div>
+
+          <!-- Middle -->
+
+          <div class="summoning-stone">
+            <img class="summoning-stone-img" src="images/summon_stone_off.png">
+            <img class="summoning-stone-img glow" src="images/summon_stone_glow.png">
+          </div>
+          <div class="stone-indicator right">
+            <img class="summon-stone" src="images/summoning_stone.png">
+          </div>
+
+          <!-- Right -->
+
+          <button type="button" id="summon-button-right" class="summon-button right">Sungay</button>
+          <div class="anito-summoner right">
+            <img src="images/anitos/tikbalang_06.png">
+          </div>
+
+        </div>
+        <div class="summon-interface">
+          <button type="button"class="summon-button">Begin summoning</button>
+        </div>
+      </div>
+
+      <section id="panel-left" class="panel">
+        <button type="button" id="btn-close-left" class="btn-close"></button>
+        <div class="panel-heading">
+          <h2>Select summoning Anito</h2>
+        </div>
+        <div class="anito-list">
+
+          <!-- Anito entry -->
+          <div class="anito-list-entry">
+            <div class="anito-list-image">
+              <img src="images/anitos/kiwig_04.png">
+            </div>
+            <div class="anito-list-details">
+              <div class="anito-number">#9151</div>
+              <div class="anito-name">
+                <img src="images/symbol_kiwig.png"><span>Bituin</span>
+              </div>
+              <div class="anito-summons">Anitos summoned: <span>2/3</span></div>
+            </div>
+          </div>
+
+          <!-- Anito entry -->
+          <div class="anito-list-entry">
+            <div class="anito-list-image">
+              <img src="images/anitos/tikbalang_12.png">
+            </div>
+            <div class="anito-list-details">
+              <div class="anito-number">#2652</div>
+              <div class="anito-name">
+                <img src="images/symbol_tikbalang.png"><span>Razzmatazz</span>
+              </div>
+              <div class="anito-summons">Anitos summoned: <span>0/3</span></div>
+            </div>
+          </div>
+
+          <!-- Anito entry -->
+          <div class="anito-list-entry">
+            <div class="anito-list-image">
+              <img src="images/anitos/siyokoy_05.png">
+            </div>
+            <div class="anito-list-details">
+              <div class="anito-number">#7166</div>
+              <div class="anito-name">
+                <img src="images/symbol_siyokoy.png"><span>Istarbak</span>
+              </div>
+              <div class="anito-summons">Anitos summoned: <span>0/3</span></div>
+            </div>
+          </div>
+
+          <!-- Anito entry -->
+          <div class="anito-list-entry">
+            <div class="anito-list-image">
+              <img src="images/anitos/sarangay_06.png">
+            </div>
+            <div class="anito-list-details">
+              <div class="anito-number">#679</div>
+              <div class="anito-name">
+                <img src="images/symbol_sarangay.png"><span>Sleepy</span>
+              </div>
+              <div class="anito-summons">Anitos summoned: <span>0/3</span></div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <section id="panel-right" class="panel">
+        <button type="button" id="btn-close-right" class="btn-close"></button>
+        <div class="panel-heading">
+          <h2>Select summoning Anito</h2>
+        </div>
+        <div class="anito-list">
+
+          <!-- Anito entry -->
+          <div class="anito-list-entry">
+            <div class="anito-list-image">
+              <img src="images/anitos/kiwig_04.png">
+            </div>
+            <div class="anito-list-details">
+              <div class="anito-number">#9151</div>
+              <div class="anito-name">
+                <img src="images/symbol_kiwig.png"><span>Bituin</span>
+              </div>
+              <div class="anito-summons">Anitos summoned: <span>2/3</span></div>
+            </div>
+          </div>
+
+          <!-- Anito entry -->
+          <div class="anito-list-entry">
+            <div class="anito-list-image">
+              <img src="images/anitos/tikbalang_12.png">
+            </div>
+            <div class="anito-list-details">
+              <div class="anito-number">#2652</div>
+              <div class="anito-name">
+                <img src="images/symbol_tikbalang.png"><span>Razzmatazz</span>
+              </div>
+              <div class="anito-summons">Anitos summoned: <span>0/3</span></div>
+            </div>
+          </div>
+
+          <!-- Anito entry -->
+          <div class="anito-list-entry">
+            <div class="anito-list-image">
+              <img src="images/anitos/siyokoy_05.png">
+            </div>
+            <div class="anito-list-details">
+              <div class="anito-number">#7166</div>
+              <div class="anito-name">
+                <img src="images/symbol_siyokoy.png"><span>Istarbak</span>
+              </div>
+              <div class="anito-summons">Anitos summoned: <span>0/3</span></div>
+            </div>
+          </div>
+
+          <!-- Anito entry -->
+          <div class="anito-list-entry">
+            <div class="anito-list-image">
+              <img src="images/anitos/sarangay_06.png">
+            </div>
+            <div class="anito-list-details">
+              <div class="anito-number">#679</div>
+              <div class="anito-name">
+                <img src="images/symbol_sarangay.png"><span>Sleepy</span>
+              </div>
+              <div class="anito-summons">Anitos summoned: <span>0/3</span></div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </section>
+
+  </main>
+  <footer>
+    <div class="footer-container">
+        <div class="footer-logo">
+            <a href="index.html"><img src="images/logo-1.png"></a>
+        </div>
+        <div class="footer-nav">
+            <ul class="footer-nav-menu">
+                <li>
+                    <a href="index.html#about">About</a>
+                </li>
+                <li>
+                    <a href="index.html#roadmap">Roadmap</a>
+                </li>
+                <li>
+                    <a href="index.html#gameflow">Game Flow</a>
+                </li>
+                <li>
+                    <a href="index.html#tokenomics">Tokenomics</a>
+                </li>
+                <li>
+                    <a href="index.html#team">The Team</a>
+                </li>
+                <li>
+                    <a href="index.html#partners">Partners</a>
+                </li>
+                <li>
+                    <a href="wallpaper.html">Wallpaper</a>
+                </li>
+                <li>
+                    <a href="https://docs.anitolegends.com/" target="_blank" rel="noreferrer">White Paper</a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer-social-media">
+            <a href="https://discord.gg/mC5yEmkSvE" target="_blank" rel="noreferrer"><i class="lni lni-discord"></i></a>
+            <a href="https://medium.com/anito-legends" target="_blank" rel="noreferrer"><i class="lni lni-medium"></i></a>
+            <a href="https://twitter.com/AnitoLegendsNFT" target="_blank" rel="noreferrer"><i class="lni lni-twitter-filled"></i></a>
+            <a href="https://www.facebook.com/AnitoLegends/" target="_blank" rel="noreferrer"><i class="lni lni-facebook-filled"></i></a>
+            <a href="https://instagram.com/anitolegends" target="_blank" rel="noreferrer"><i class="lni lni-instagram-filled"></i></a>
+            <a href="https://t.me/anitolegendsnft" target="_blank" rel="noreferrer"><i class="lni lni-telegram-original"></i></a>
+        </div>
+    </div>
+    <div class="footer-container footer-copyright">
+        <div>
+            &copy; 2021-2022 Anito Legends and Masayato
+        </div>
+    </div>
+  </footer>
+
+  <!-- slide out menu start -->
+  <div class="nav-menu-slide" id="nav-menu">
+    <ul class="nav-menu-list">
+        <li>
+            <a href="index.html#about">About</a>
+        </li>
+        <li>
+            <a href="index.html#roadmap">Roadmap</a>
+        </li>
+        <li>
+            <a href="index.html#gameflow">Game Flow</a>
+        </li>
+        <li>
+            <a href="index.html#tokenomics">Tokenomics</a>
+        </li>
+        <li>
+            <a href="index.html#team">The Team</a>
+        </li>
+        <li>
+            <a href="index.html#partners">Partners</a>
+        </li>
+        <li>
+            <a href="wallpaper.html">Wallpaper</a>
+        </li>
+        <li>
+            <a href="https://docs.anitolegends.com/" target="_blank" rel="noreferrer">White Paper</a>
+        </li>
+        <li class="highlight">
+            <a href="https://play.anitolegends.com/" target="_blank" rel="noreferrer">Play Now</a>
+        </li>
+    </ul>
+    <div class="nav-menu-close" onclick="CloseMenu()">
+        <i class="lni lni-close"></i>
+    </div>
+  </div>
+  <!-- slide out menu end -->
+
+  <script src="js/summon-animations.js?version=0.0.1"></script>
+  <script>
+    window.onload = randomStoneDelay()
+    window.onload = startListeners()
+  </script>
+</body>
+</html>
