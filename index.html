@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://cdn.lineicons.com/3.0/lineicons.css" rel="stylesheet">
 
-  <link rel="stylesheet" href="css/style.css?version=0.0.4">
+  <link rel="stylesheet" href="css/style.css?version=0.0.5">
 </head>
 <body>
   <nav class="main-nav">
@@ -75,8 +75,8 @@
         </div>
         <img class="summon-hill" src="images/summon_hill.png">
         <div class="summoning-stone">
-          <img class="summoning-stone-img" src="images/summon_stone_off.png">
-          <img class="summoning-stone-img glow" src="images/summon_stone_glow.png">
+          <img class="summoning-stone-img summoning-stone-position" src="images/summon_stone_off.png">
+          <img class="summoning-stone-img glow summoning-stone-position" src="images/summon_stone_glow.png">
         </div>
         <div class="container-hill">
           <h2 class="summon-title">The Rite of Ipa Tawag</h2>
@@ -105,189 +105,29 @@
 
           <!-- Bottom -->
           <div class="summon-interface">
-            <button type="button"class="summon-button">Begin summoning</button>
+            <button type="button" class="summon-button" id="summon-button">Begin summoning!</button>
           </div>
 
         </div>
       </div>
 
       <section id="panel-left" class="panel">
-        <button type="button" id="btn-close-left" class="btn-close"></button>
+        <!-- <button type="button" id="btn-close-left" class="btn-close"></button> -->
         <div class="panel-heading">
           <h2>Select summoning Anito</h2>
         </div>
         <div class="anito-list">
-
-          <!-- Anito entry -->
-          <div class="anito-list-entry"
-            name="Bituin"
-            number="9151"
-            type="kiwig"
-            summons="2"
-            image="kiwig_04.png"
-            >
-            <div class="anito-list-image">
-              <img src="images/anitos/kiwig_04.png">
-            </div>
-            <div class="anito-list-details">
-              <div class="anito-number">#9151</div>
-              <div class="anito-name">
-                <img src="images/symbol_kiwig.png"><span>Bituin</span>
-              </div>
-              <div class="anito-summons">Anitos summoned: <span>2/3</span></div>
-            </div>
-          </div>
-
-          <!-- Anito entry -->
-          <div class="anito-list-entry"
-            name="Razzmatazz"
-            number="2652"
-            type="tikbalang"
-            summons="0"
-            image="tikbalang_12.png"
-            >
-            <div class="anito-list-image">
-              <img src="images/anitos/tikbalang_12.png">
-            </div>
-            <div class="anito-list-details">
-              <div class="anito-number">#2652</div>
-              <div class="anito-name">
-                <img src="images/symbol_tikbalang.png"><span>Razzmatazz</span>
-              </div>
-              <div class="anito-summons">Anitos summoned: <span>0/3</span></div>
-            </div>
-          </div>
-
-          <!-- Anito entry -->
-          <div class="anito-list-entry"
-            name="Istarbak"
-            number="7166"
-            type="siyokoy"
-            summons="0"
-            image="siyokoy_05.png"
-            >
-            <div class="anito-list-image">
-              <img src="images/anitos/siyokoy_05.png">
-            </div>
-            <div class="anito-list-details">
-              <div class="anito-number">#7166</div>
-              <div class="anito-name">
-                <img src="images/symbol_siyokoy.png"><span>Istarbak</span>
-              </div>
-              <div class="anito-summons">Anitos summoned: <span>0/3</span></div>
-            </div>
-          </div>
-
-          <!-- Anito entry -->
-          <div class="anito-list-entry"
-            name="Sleepy"
-            number="679"
-            type="sarangay"
-            summons="0"
-            image="sarangay_06.png"
-            >
-            <div class="anito-list-image">
-              <img src="images/anitos/sarangay_06.png">
-            </div>
-            <div class="anito-list-details">
-              <div class="anito-number">#679</div>
-              <div class="anito-name">
-                <img src="images/symbol_sarangay.png"><span>Sleepy</span>
-              </div>
-              <div class="anito-summons">Anitos summoned: <span>0/3</span></div>
-            </div>
-          </div>
-
+          <!-- Anitos get listed here -->
         </div>
       </section>
 
       <section id="panel-right" class="panel">
-        <button type="button" id="btn-close-right" class="btn-close"></button>
+        <!-- <button type="button" id="btn-close-right" class="btn-close"></button> -->
         <div class="panel-heading">
           <h2>Select summoning Anito</h2>
         </div>
         <div class="anito-list">
-
-          <!-- Anito entry -->
-          <div class="anito-list-entry"
-            name="Bituin"
-            number="9151"
-            type="kiwig"
-            summons="2"
-            image="kiwig_04.png"
-            >
-            <div class="anito-list-image">
-              <img src="images/anitos/kiwig_04.png">
-            </div>
-            <div class="anito-list-details">
-              <div class="anito-number">#9151</div>
-              <div class="anito-name">
-                <img src="images/symbol_kiwig.png"><span>Bituin</span>
-              </div>
-              <div class="anito-summons">Anitos summoned: <span>2/3</span></div>
-            </div>
-          </div>
-
-          <!-- Anito entry -->
-          <div class="anito-list-entry"
-            name="Razzmatazz"
-            number="2652"
-            type="tikbalang"
-            summons="0"
-            image="tikbalang_12.png"
-            >
-            <div class="anito-list-image">
-              <img src="images/anitos/tikbalang_12.png">
-            </div>
-            <div class="anito-list-details">
-              <div class="anito-number">#2652</div>
-              <div class="anito-name">
-                <img src="images/symbol_tikbalang.png"><span>Razzmatazz</span>
-              </div>
-              <div class="anito-summons">Anitos summoned: <span>0/3</span></div>
-            </div>
-          </div>
-
-          <!-- Anito entry -->
-          <div class="anito-list-entry"
-            name="Istarbak"
-            number="7166"
-            type="siyokoy"
-            summons="0"
-            image="siyokoy_05.png"
-            >
-            <div class="anito-list-image">
-              <img src="images/anitos/siyokoy_05.png">
-            </div>
-            <div class="anito-list-details">
-              <div class="anito-number">#7166</div>
-              <div class="anito-name">
-                <img src="images/symbol_siyokoy.png"><span>Istarbak</span>
-              </div>
-              <div class="anito-summons">Anitos summoned: <span>0/3</span></div>
-            </div>
-          </div>
-
-          <!-- Anito entry -->
-          <div class="anito-list-entry"
-            name="Sleepy"
-            number="679"
-            type="sarangay"
-            summons="0"
-            image="sarangay_06.png"
-            >
-            <div class="anito-list-image">
-              <img src="images/anitos/sarangay_06.png">
-            </div>
-            <div class="anito-list-details">
-              <div class="anito-number">#679</div>
-              <div class="anito-name">
-                <img src="images/symbol_sarangay.png"><span>Sleepy</span>
-              </div>
-              <div class="anito-summons">Anitos summoned: <span>0/3</span></div>
-            </div>
-          </div>
-
+          <!-- Anitos get listed here -->
         </div>
       </section>
     </section>
@@ -379,12 +219,13 @@
   </div>
   <!-- slide out menu end -->
 
-  <script src="js/summon-animations.js?version=0.0.4"></script>
+  <script src="js/summon-animations.js?version=0.0.5"></script>
   <script>
     window.onload = () => {
       startListeners()
-      window.onload = createStonesLeft(4)
-      window.onload = createStonesRight(2)
+      createStonesLeft(3)
+      createStonesRight(2)
+
     }
   </script>
 </body>

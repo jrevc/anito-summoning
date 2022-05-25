@@ -1,0 +1,60 @@
+{
+  "anitos": [
+    {
+      "name": "Bituin",
+      "number": "9151",
+      "type": "kiwig",
+      "summons": "2",
+      "image": "kiwig_04.png"
+    },
+    {
+      "name": "Razzmatazz",
+      "number": "2652",
+      "type": "tikbalang",
+      "summons": "0",
+      "image": "tikbalang_12.png"
+    },
+    {
+      "name": "Istarbak",
+      "number": "7166",
+      "type": "siyokoy",
+      "summons": "0",
+      "image": "siyokoy_05.png"
+    },
+    {
+      "name": "Sungay",
+      "number": "8209",
+      "type": "tikbalang",
+      "summons": "1",
+      "image": "tikbalang_06.png"
+    },
+    {
+      "name": "Sleepy",
+      "number": "679",
+      "type": "sarangay",
+      "summons": "0",
+      "image": "sarangay_06.png"
+    },
+    {
+      "name": "Balawis",
+      "number": "5862",
+      "type": "sarangay",
+      "summons": "0",
+      "image": "sarangay_03.png"
+    },
+    {
+      "name": "Luntian",
+      "number": "112",
+      "type": "kiwig",
+      "summons": "2",
+      "image": "kiwig_05.png"
+    },
+    {
+      "name": "Ysda",
+      "number": "2242",
+      "type": "siyokoy",
+      "summons": "3",
+      "image": "siyokoy_09.png"
+    }
+  ]
+}
