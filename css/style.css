@@ -345,7 +345,24 @@ a:hover ~ .nav-dropdown-menu,
   margin: 0 auto;
   bottom: 0%;
   max-width: 100%;
+  animation: swirl-pulse 12s ease-in-out infinite;
+}
+
+#summoning.pulse .swirl,
+#summoning.flash .swirl {
   animation: swirl-turn 6s linear infinite;
+}
+
+@keyframes swirl-pulse {
+  0% {
+    transform: scale(1)
+  }
+  50% {
+    transform: scale(0.9)
+  }
+  100% {
+    transform: scale(1)
+  }
 }
 
 @keyframes swirl-turn {
@@ -429,6 +446,13 @@ a:hover ~ .nav-dropdown-menu,
   cursor: pointer;
 }
 
+#summon-button-left.disabled,
+#summon-button-right.disabled {
+  background-color: transparent;
+  border: 2px solid white;
+  pointer-events: none;
+}
+
 .summon-interface .summon-button {
   font-size: 18px;
   padding: 20px 40px;
@@ -446,6 +470,15 @@ a:hover ~ .nav-dropdown-menu,
 .summon-button.right {
   grid-area: btn-right;
   z-index: 6;
+}
+
+#summon-button {
+  transition: transform 0.25s ease-in;
+  transform: scale(1);
+}
+
+#summon-button.disabled {
+  transform: scale(0);
 }
 
 /********************/
@@ -716,6 +749,11 @@ a:hover ~ .nav-dropdown-menu,
   flex-direction: column;
   margin-bottom: 12px;
   cursor: pointer;
+}
+
+.anito-list-entry.disabled {
+  pointer-events: none;
+  opacity: 0.5;
 }
 
 .anito-list-entry:hover {

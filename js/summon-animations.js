@@ -214,7 +214,7 @@ const populateListLeft = () => {
   let populatePromise = new Promise(function(resolve, reject) {
     let newAnitoData = ""
     for (let i = 0; i < anitoData.length; i++) {
-      newAnitoData += `<div class="anito-list-entry"
+      newAnitoData += `<div class="anito-list-entry` + (anitoData[i].summons >= 3 ? ` disabled` : ``) + `"
         data-name=` + anitoData[i].name +
         ` data-number=` + anitoData[i].number +
         ` data-type=` + anitoData[i].type +
@@ -260,7 +260,7 @@ const populateListRight = () => {
   let populatePromise = new Promise(function(resolve, reject) {
     let newAnitoData = ""
     for (let i = 0; i < anitoData.length; i++) {
-      newAnitoData += `<div class="anito-list-entry"
+      newAnitoData += `<div class="anito-list-entry` + (anitoData[i].summons >= 3 ? ` disabled` : ``) + `"
         data-name=` + anitoData[i].name +
         ` data-number=` + anitoData[i].number +
         ` data-type=` + anitoData[i].type +
@@ -309,6 +309,10 @@ const populateListRight = () => {
 const startSummonAnim = () => {
   document.querySelector("#summon-button").removeEventListener("click", startSummonAnim)
   document.querySelector("#summon-button").addEventListener("click", completeSummonAnim)
+  document.querySelector("#summon-button").innerHTML = "Continue summoning!"
+
+  document.querySelector("#summon-button-left").classList.add("disabled")
+  document.querySelector("#summon-button-right").classList.add("disabled")
 
   let leftStones = document.querySelectorAll(".left .summon-stone")
   leftStones.forEach(stone => {
@@ -361,6 +365,7 @@ const completeSummonAnim = () => {
   document.querySelector("#stone-slots").classList.add("reverse")
 
   document.querySelector("#summon-button").removeEventListener("click", completeSummonAnim)
+  document.querySelector("#summon-button").classList.add("disabled")
 }
 
 randomStoneMovementDelay = () => {
