@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://cdn.lineicons.com/3.0/lineicons.css" rel="stylesheet">
 
-  <link rel="stylesheet" href="css/style.css?version=0.0.5">
+  <link rel="stylesheet" href="css/style.css?version=0.0.6">
 </head>
 <body>
   <nav class="main-nav">
@@ -75,8 +75,10 @@
         </div>
         <img class="summon-hill" src="images/summon_hill.png">
         <div class="summoning-stone">
-          <img class="summoning-stone-img summoning-stone-position" src="images/summon_stone_off.png">
+          <img class="summoning-stone-img summoning-stone-position off" src="images/summon_stone_off.png">
           <img class="summoning-stone-img glow summoning-stone-position" src="images/summon_stone_glow.png">
+          <img class="summoning-stone-img summoning-stone-position" id="stone-slots" src="images/summon_stone_slots.png">
+          <img class="summoning-stone-img summoning-stone-position on" src="images/summon_stone_on.png">
         </div>
         <div class="container-hill">
           <h2 class="summon-title">The Rite of Ipa Tawag</h2>
@@ -219,13 +221,12 @@
   </div>
   <!-- slide out menu end -->
 
-  <script src="js/summon-animations.js?version=0.0.5"></script>
+  <script src="js/summon-animations.js?version=0.0.6"></script>
   <script>
     window.onload = () => {
       startListeners()
       createStonesLeft(3)
       createStonesRight(2)
-
     }
   </script>
 </body>

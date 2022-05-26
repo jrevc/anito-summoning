@@ -163,11 +163,11 @@ createStonesRight = (count) => {
   stoneRight.innerHTML = stoneContent
 
   for (let i = 0; i < count; i++) {
-    let start = count >= 3 ? (i < 2 ? 400 : 280) : 440 - ((count - 1) * 40)
+    let start = count >= 3 ? (i < 2 ? 0 : -120) : 40 - ((count - 1) * 40)
     let offset = count >= 3 ? i * 80 : i * 80
     let vStart = 170
     let vOffset = count >= 3 ? (i < 2 ? -40 : 40) : 0
-    stoneContent += '<img class="summon-stone" src="images/summoning_stone.png" style="left:' + (start + offset) + 'px; top: ' + (vStart + vOffset) + 'px">'
+    stoneContent += '<img class="summon-stone" src="images/summoning_stone.png" style="right:' + (start + offset) + 'px; top: ' + (vStart + vOffset) + 'px">'
   }
   stoneRight.innerHTML = stoneContent
 
@@ -307,8 +307,11 @@ const populateListRight = () => {
 /***********************/
 
 const startSummonAnim = () => {
-  let stones = document.querySelectorAll(".summon-stone")
-  stones.forEach(stone => {
+  document.querySelector("#summon-button").removeEventListener("click", startSummonAnim)
+  document.querySelector("#summon-button").addEventListener("click", completeSummonAnim)
+
+  let leftStones = document.querySelectorAll(".left .summon-stone")
+  leftStones.forEach(stone => {
     const rect = stone.getBoundingClientRect()
     // console.log((rect.left + window.scrollX) + " | " + (rect.top + window.scrollY))
 
@@ -321,13 +324,43 @@ const startSummonAnim = () => {
     stone.style.top = topOffset + "px"
     stone.style.width = "80px"
 
-    moveStoneToPillar(stone)
+    moveStoneToPillar(stone, 0)
   })
+
+  let rightStones = document.querySelectorAll(".right .summon-stone")
+  rightStones.forEach(stone => {
+    const rect = stone.getBoundingClientRect()
+    // console.log((screen.width - rect.right) + " | " + (rect.top + window.scrollY))
+
+    let rightOffset = window.innerWidth - (rect.right - window.scrollX + 17)
+    let topOffset = rect.top + window.scrollY
+
+    stone.style.position = "absolute"
+    document.querySelector("body").appendChild(stone)
+    stone.style.right = rightOffset + "px"
+    stone.style.top = topOffset + "px"
+    stone.style.width = "80px"
+
+    moveStoneToPillar(stone, 1)
+  })
+
+  document.querySelector("#summoning").classList.add("pulse")
+  document.querySelector("#stone-slots").classList.add("active")
 }
 
-const moveStoneToPillar = (obj) => {
+const moveStoneToPillar = (obj, dir) => {
   randomMovementDelay(obj)
-  obj.classList.add("travelling")
+  dir == 0 ? obj.classList.add("travelling-left") : obj.classList.add("travelling-right")
+}
+
+const completeSummonAnim = () => {
+  document.querySelector("#summoning").classList.remove("pulse")
+  document.querySelector("#summoning").classList.add("flash")
+
+  document.querySelector("#stone-slots").classList.remove("active")
+  document.querySelector("#stone-slots").classList.add("reverse")
+
+  document.querySelector("#summon-button").removeEventListener("click", completeSummonAnim)
 }
 
 randomStoneMovementDelay = () => {

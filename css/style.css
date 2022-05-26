@@ -238,6 +238,77 @@ a:hover ~ .nav-dropdown-menu,
   overflow: hidden;
 }
 
+#summoning.pulse {
+  animation: summon-pulse 1.5s infinite;
+}
+
+@keyframes summon-pulse {
+  0% {
+    filter: brightness(1);
+  }
+  20% {
+    filter: brightness(1.5);
+  }
+  60% {
+    filter: brightness(1);
+  }
+  80% {
+    filter: brightness(1.25);
+  }
+  100% {
+    filter: brightness(1);
+  }
+}
+
+#summoning.flash {
+  animation: summon-flash 2s forwards;
+}
+
+@keyframes summon-flash {
+  0% {
+    filter: brightness(1);
+  }
+  33% {
+    filter: brightness(1);
+  }
+  66% {
+    filter: brightness(10);
+  }
+  100% {
+    filter: brightness(1);
+  }
+}
+
+@keyframes turn-off {
+  0% {
+    opacity: 1;
+  }
+  33% {
+    opacity: 1;
+  }
+  66% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes turn-on {
+  0% {
+    opacity: 0;
+  }
+  33% {
+    opacity: 0;
+  }
+  66% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 #summon-filter {
   position: absolute;
   width: 100%;
@@ -408,14 +479,37 @@ a:hover ~ .nav-dropdown-menu,
   animation: stone-bob 4s infinite var(--delay-time) ease-in-out;
 }
 
-.summon-stone.travelling {
-  animation: stone-movement var(--stone-speed) forwards var(--stone-delay);
+.summon-stone.travelling-left {
+  animation: stone-movement-left var(--stone-speed) forwards var(--stone-delay);
 }
 
-@keyframes stone-movement {
+@keyframes stone-movement-left {
+  80% {
+    left: calc(50% - 50px);
+    top: 390px;
+    transform: scale(1);
+  }
   100% {
     left: calc(50% - 50px);
     top: 390px;
+    transform: scale(0);
+  }
+}
+
+.summon-stone.travelling-right {
+  animation: stone-movement-right var(--stone-speed) forwards var(--stone-delay);
+}
+
+@keyframes stone-movement-right {
+  80% {
+    right: calc(50% - 33px);
+    top: 390px;
+    transform: scale(1);
+  }
+  100% {
+    right: calc(50% - 33px);
+    top: 390px;
+    transform: scale(0);
   }
 }
 
@@ -458,6 +552,22 @@ a:hover ~ .nav-dropdown-menu,
   height: 50%;
 }
 
+.summoning-stone-img.off {
+  opacity: 1;
+}
+
+#summoning.flash .summoning-stone-img.off {
+  animation: turn-off 2s forwards;
+}
+
+.summoning-stone-img.on {
+  opacity: 0;
+}
+
+#summoning.flash .summoning-stone-img.on {
+  animation: turn-on 2s forwards;
+}
+
 .summoning-stone-position {
   position: absolute;
   bottom: 150px;
@@ -483,6 +593,43 @@ a:hover ~ .nav-dropdown-menu,
   }
   100% {
     filter: opacity(0);
+  }
+}
+
+#stone-slots {
+  transform: translateX(-50%) scale(0);
+  z-index: 8;
+}
+
+#stone-slots.active {
+  animation: slots-appear 0.75s forwards 1.75s;
+}
+
+#stone-slots.reverse {
+  animation: slots-disappear 0.5s forwards;
+}
+
+@keyframes slots-appear {
+  0% {
+    transform: translateX(-50%) scale(0);
+  }
+  80% {
+    transform: translateX(-50%) scale(1.04);
+  }
+  100% {
+    transform: translateX(-50%) scale(1);
+  }
+}
+
+@keyframes slots-disappear {
+  0% {
+    transform: translateX(-50%) scale(1);
+  }
+  40% {
+    transform: translateX(-50%) scale(1.04);
+  }
+  100% {
+    transform: translateX(-50%) scale(0);
   }
 }
 
